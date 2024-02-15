@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+.navbar li a {
+    text-decoration: none;
+}
+
+.mobile-view li a {
+    text-decoration: none;
+}
+.mobile-view{
+    list-style: none;
+    font-weight: 900;
+}
+.mobile-view li{
+    margin-top: 10px;
+}
