@@ -1,16 +1,17 @@
 import {
   AppBar,
   Box,
+  Divider,
   Drawer,
   IconButton,
   Toolbar,
   Typography,
 } from "@mui/material";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import logo from "../../images/logo.svg";
 
 const Navbar = () => {
   const [mobileView, setMobileView] = useState(false);
@@ -20,27 +21,31 @@ const Navbar = () => {
   };
   // menu drawer-->
   const drawer = (
-    <Box onClick={handleOpenMenu} sx={{ p: 4 }}>
+    <Box onClick={handleOpenMenu} sx={{ width: 260 }}>
       <Typography
         variant="h5"
         component="div"
-        sx={{ flexGrow: 1, color: "#FF6400" }}
+        sx={{ flexGrow: 1, color: "#FF6400", pl: 3, py: 2 }}
       >
-        <FastfoodIcon />
-        <span style={{ fontWeight: "bold" }}> My Restaurant</span>
+        <img
+          src={logo}
+          alt=""
+          style={{ color: "#FF6400", width: "100%", height: 60 }}
+        />
       </Typography>{" "}
+      <Divider />
       <ul className="mobile-view">
         <li>
-          <Link to={"/"}>Home</Link>{" "}
+          <NavLink to={"/"}>Home</NavLink>{" "}
         </li>
         <li>
-          <Link to={"/menu"}>Menu</Link>
+          <NavLink to={"/menu"}>Menu</NavLink>
         </li>
         <li>
-          <Link to={"/contact"}>Contact</Link>
+          <NavLink to={"/contact"}>Contact</NavLink>
         </li>
         <li>
-          <Link to={"/about"}>About</Link>
+          <NavLink to={"/about"}>About</NavLink>
         </li>
       </ul>
     </Box>
@@ -73,23 +78,24 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, color: "#FF6400" }}
           >
-            <FastfoodIcon />
-            <span style={{ fontWeight: "bold" }}> My Restaurant</span>
+            <img src={logo} alt="" style={{ width: 250, height: 60 }} />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {" "}
             <ul className="navbar">
               <li>
-                <Link to={"/"}>Home</Link>{" "}
+                <NavLink activeClassName="active" to={"/"}>
+                  Home
+                </NavLink>{" "}
               </li>
               <li>
-                <Link to={"/menu"}>Menu</Link>
+                <NavLink to={"/menu"}>Menu</NavLink>
               </li>
               <li>
-                <Link to={"/contact"}>Contact</Link>
+                <NavLink to={"/contact"}>Contact</NavLink>
               </li>
               <li>
-                <Link to={"/about"}>About</Link>
+                <NavLink to={"/about"}>About</NavLink>
               </li>
             </ul>
           </Box>

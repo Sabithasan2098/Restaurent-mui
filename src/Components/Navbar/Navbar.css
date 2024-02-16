@@ -18,4 +18,9 @@
 }
 .mobile-view li{
     margin-top: 10px;
+    padding-left: 24px;
+}
+.active{
+    color:#FF6400 !important;
+    font-weight: bolder !important;
 }

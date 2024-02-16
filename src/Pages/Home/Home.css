@@ -1,0 +1,70 @@
+
+
+.home{
+    background-image:url("../../images/banner.jpeg") ;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+}
+
+.container{
+    color: orangered;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container h1{
+    font-size: 84px;
+    font-weight: 900;
+}
+.container p{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+
+.button {
+    margin-top: 16px;
+    background-color: #FF6400;
+    color: white;
+    border-style: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+@media (max-width:600px) {
+    .container{
+        background-color:#FF6400 ;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .container h1{
+        font-size: 24px;
+        font-weight: 500;
+
+    }
+    .container p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .button{
+        font-size: 8px;
+        margin-top: 4px;
+        padding: 2px 4px;
+        background-color: white;
+        color: #FF6400;
+        border-radius: 4px;
+        font-weight: 800;
+    }
+    .home{
+        height: auto;
+        padding: 30px 4px;
+    }
+   
+}
